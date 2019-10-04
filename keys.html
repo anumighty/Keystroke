@@ -39,8 +39,6 @@
 					<br /> 
 					When I enter "password" my match score is usually between 2-5. Can you beat the system?
 					</div>
-		  			<br /><br />
-		  			</div>Template is <input type="text" disabled="disabled" id="temp"/>
 					
 					<script>
 					var count = 0;
@@ -98,6 +96,7 @@
 						old={};
 						var score=0;
 						//alert('here1')
+						alert(JSON.stringify(template, null, 4))
 						console.log(template);
 						for (var key in template) {
 							if (key in digraphs) {
@@ -137,7 +136,6 @@
 									document.getElementById('score').setAttribute("value", score+"     access granted");
 								} else {
 								document.getElementById('score').setAttribute("value", score+"     access denied");
-								document.getElementById('temp').setAttribute("value", template);
 								}
 							} else {
 								document.getElementById('score').setAttribute("value", "N/A");
